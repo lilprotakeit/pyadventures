@@ -1,0 +1,28 @@
+[project]
+name = "notebooks"
+version = "0.1.0"
+description = "Data playground and experimentation workspace"
+readme = "README.md"
+authors = [
+    { name = "Praveen Kumar", email = "praveenk0604@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "jupyter>=1.1.1",
+    "matplotlib>=3.11.0",
+    "polars>=1.41.2",
+]
+
+[tool.ruff]
+# Extend configuration to explicitly handle notebooks
+extend-include = ["*.ipynb"]
+
+[tool.ruff.lint]
+# E/F/I for clean code, plus NB006 to completely strip cell outputs
+select = ["E", "F", "I", "NB006"] 
+
+# This tells ruff that stripping notebook outputs is an automatic "fix"
+fixable = ["NB006"]
+
+[tool.ruff.format]
+docstring-code-format = true

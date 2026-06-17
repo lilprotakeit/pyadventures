@@ -1,0 +1,24 @@
+[project]
+name = "pyadventures"
+version = "0.1.0"
+description = "Python Adventures Monorepo"
+readme = "README.md"
+requires-python = ">=3.14"
+
+[tool.uv]
+managed = true
+
+[tool.uv.workspace]
+members = [
+    "OOPS",
+    "Functional Programming",
+    "AsyncIo",
+    "Pydantic",
+    "Design Patterns",
+    "Notebooks",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.17",
+]
