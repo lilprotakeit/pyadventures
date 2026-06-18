@@ -8,9 +8,11 @@ authors = [
 ]
 requires-python = ">=3.14"
 dependencies = [
+    "cowsay>=6.1",
     "jupyter>=1.1.1",
     "matplotlib>=3.11.0",
     "polars>=1.41.2",
+    "requests>=2.34.2",
 ]
 
 [tool.ruff]
@@ -18,11 +20,8 @@ dependencies = [
 extend-include = ["*.ipynb"]
 
 [tool.ruff.lint]
-# E/F/I for clean code, plus NB006 to completely strip cell outputs
-select = ["E", "F", "I", "NB006"] 
-
-# This tells ruff that stripping notebook outputs is an automatic "fix"
-fixable = ["NB006"]
+# E (pycodestyle), F (Pyflakes), I (isort) for clean cells and sorted imports
+select = ["E", "F", "I"]
 
 [tool.ruff.format]
 docstring-code-format = true
