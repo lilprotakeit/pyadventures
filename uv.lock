@@ -1095,6 +1095,12 @@ wheels = [
 name = "oops"
 version = "0.1.0"
 source = { editable = "OOPS" }
+dependencies = [
+    { name = "numpy" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "numpy", specifier = ">=2.4.6" }]
 
 [[package]]
 name = "packaging"
