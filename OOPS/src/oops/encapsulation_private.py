@@ -1,3 +1,10 @@
+"""
+Implementation of private access modifier in python using encapsulation.
+In python, we can make a variable private by adding __ before the variable name.
+Private variables cannot be accessed outside the class.
+We can access private variables using getter and setter methods.
+"""
+
 from random import randint
 
 
