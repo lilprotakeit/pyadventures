@@ -2,7 +2,7 @@
 Sample implementation of class methods in python
 ----------------------------------------------------
 @classmethod is used to create a method that works with the class instead of an object instance.
-A class method receives the class itself as the first argument using cls.
+IMP: |--- A CLASS METHOD RECEIVES THE CLASS ITSELF AS THE FIRST ARGUMENT USING CLS ---|
 It is commonly used to access class variables, create factory methods and perform operations related to the class.
 
 In the program below, we have a class Student with a class variable school_name and
