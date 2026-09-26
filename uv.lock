@@ -1047,6 +1047,7 @@ version = "0.1.0"
 source = { virtual = "Notebooks" }
 dependencies = [
     { name = "cowsay" },
+    { name = "ipykernel" },
     { name = "jupyter" },
     { name = "matplotlib" },
     { name = "polars" },
@@ -1056,6 +1057,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "cowsay", specifier = ">=6.1" },
+    { name = "ipykernel", specifier = ">=7.3.0" },
     { name = "jupyter", specifier = ">=1.1.1" },
     { name = "matplotlib", specifier = ">=3.11.0" },
     { name = "polars", specifier = ">=1.41.2" },
