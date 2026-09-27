@@ -14,14 +14,13 @@ class Payment_Processor(ABC):
     @abstractmethod  # This decorator indicates that the method is abstract and must be implemented by any subclass.
     def process_payment(self, amount: float) -> bool:
         """process a payment of given amount"""
-        pass
 
     @abstractmethod  # This decorator indicates that the method is abstract and must be implemented by any subclass.
     def refund_payment(self, transaction_id: str) -> bool:
         """refund a payment of given amount"""
-        pass
 
-    # if a subclass does not implement all the abstract methods, it will also be considered an abstract class and cannot be instantiated.
+    # if a subclass does not implement all the abstract methods,
+    # it will also be considered an abstract class and cannot be instantiated.
 
 
 class StripePaymentProcessor(Payment_Processor):
